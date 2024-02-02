@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white; 
+    background-color: black;
+    background-image: linear-gradient(45deg, #111 25%, transparent 25%), linear-gradient(-45deg, #111 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #111 75%), linear-gradient(-45deg, transparent 75%, #111 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+#calculator {
+    font-family: Arial, sans-serif;
+    background-color: #333; 
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+    box-shadow: 0 0 100px rgb(255, 255, 255), 0 0 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.1); 
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: #444;
+    color: white;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: #555; 
+    color: white; 
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #666; 
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+button:active {
+    background-color: #444; 
+    transform: scale(0.9); 
+    box-shadow: none; 
+}
+
+.operator-btn{
+    background-color: #ff5f5f;
+}
+
+.operator-btn:hover{
+    background-color: #ff7f7f;
+}
+
+.operator-btn:active{
+    background-color: #ff9f9f;
+}
+
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    #calculator {
+        max-width: 80%;
+    }
+    
+    .keys {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        padding: 15px;
+    }
+    
+    button {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+}
